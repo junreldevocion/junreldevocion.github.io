@@ -1,0 +1,105 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: PopLight;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: PopRegular;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+body {
+    font-family: PopRegular;
+    color: #FFF;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+nav .brand-name a {
+    color: #1ad3ea;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+nav ul li {
+    display: inline;
+    text-decoration: none;
+    padding-left: 50px;
+    line-height: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+/* HOME */
+.home {
+    background-image: url('../img/blur-close-up-code-computer-546819-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home .home-content {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.home .home-content .detail {
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.home .home-content .detail h3 {
+    color:#1ad3ea;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.home .home-content .detail h1 {
+    color:#FFF;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.home .home-content .detail p {
+    color:#FFF;
+    font-size: 22px;
+    font-weight: bolder;
+    padding-bottom: 40px;
+}
+
+.home .home-content .detail a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #FFF;
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
