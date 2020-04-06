@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JunyxDev | Web Developer</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.13.0-web/css/all.css">
 </head>
 
 <body>
@@ -15,38 +16,107 @@
                 <a href="#" class="logo">{;}</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a data-page="home" href="#" class="active">Home</a></li>
+                <li><a data-page="about" href="#">About</a></li>
+                <li><a data-page="project" href="#">Project</a></li>
+                <li><a data-page="contact" href="#">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            <div class="bubble"></div>
         </nav>
     </header>
     <main>
-        <section class="home">
+        <section data-index="0" class="home">
             <div class="home-content container">
                 <div class="detail">
                     <h3>Junrel M. Devocion</h3>
                     <h1>I will make your life easy!</h1>
-                    <p>I'm a programmer with 2yrs of experience.</p>
+                    <p>I'm a passionate programmer with 2yrs of experience.</p>
                     <a href="#" class="btn btn-work">Check My Work</a>
                     <a href="#" class="btn btn-contact">Contact Me</a>
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section data-index="1" class="about">
             <div class="about-content container">
                 <div class="detail">
                     <h1>About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iusto iste libero dicta modi.
+                        Reiciendis vitae laboriosam harum rerum, dolore nam. Cumque, facilis ducimus perspiciatis
+                        voluptatibus aspernatur qui voluptate. Voluptatem.
+                    </p>
+                    <div class="hero">
+                        <img src="./assets/img/about.jpg" alt="junrel">
+                    </div>
+                    <div class="detail-information">
+                        <h3>Personal Information</h3>
+                        <div class="block">
+                            <label for="">Name:</label>
+                            <span>Junrel M. Devocion</span>
+                        </div>
+                        <div class="block">
+                            <label for="">Email:</label>
+                            <span>junrel.mdevocion@gmail.com</span>
+                        </div>
+                        <div class="block">
+                            <label for="">Phone:</label>
+                            <span>+63 921 916 2534</span>
+                        </div>
+                        <div class="block">
+                            <label for="">Address:</label>
+                            <span>616 Purok 6 Hernandez St. Catmon, Malabon City</span>
+                        </div>
+                        <h3>Education</h3>
+                        <div class="block">
+                            <label for="">Course:</label>
+                            <span>Bachelor of Science in Information Technology</span>
+                        </div>
+                        <div class="block">
+                            <label for="">Year:</label>
+                            <span>2014-2018</span>
+                        </div>
+                        <div class="block">
+                            <label for="">School:</label>
+                            <span>Palompon Institute of Technology</span>
+                        </div>
+                        <div class="block">
+                            <label for="">Address:</label>
+                            <span>Evangelista Street Palompon, Leyte 6538 Philippines</span>
+                        </div>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="desc">
+            <h1>{;}</h1>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>All rights reserved <i class="fas fa-copyright"></i> 2020</p>
+                <p>Design by: Junrel M. Devocion</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./fontawesome-free-5.13.0-web/js/all.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 
