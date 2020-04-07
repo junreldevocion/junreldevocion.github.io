@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: PopLight;
+    font-family: PopRegular;
     color: #FFF;
 }
 
@@ -25,21 +25,24 @@ body {
 }
 
 /* Header */
-
 .bubble {
     position: absolute;
     z-index: -2;
     border-bottom: 2px solid #1ad3ea;
     transition: all 0.5s ease;
     transform: scaleX(2);
-    overflow: hidden;
-    /* background-color: #347b84; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize; */
 }
 
 header {
     position: fixed;
     left: 0;
     right: 0;
+    transition: all 0.3s ease;
+    background-color: #212529;
 }
 
 .hamburger {
@@ -59,9 +62,19 @@ nav .brand-name, nav ul {
 nav .brand-name a {
     color: #1ad3ea;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
+    position: relative;
 }
+
+/* nav .brand-name a::before {
+    content: '';
+    height: 2px;
+    background-color: #1ad3ea;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+} */
 
 nav ul {
     display: flex;
@@ -133,10 +146,53 @@ nav ul li a:hover::before {
 
 /* HOME */
 .home {
-    background-image: url('../img/home-back-1.jpg');
+    /* background-image: url('../img/home-back-1.jpg'); */
+    background-color: #343a40;
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+.bg-bubble-1 {
+    right: 0;
+}
+
+.bg-bubble-2 {
+    left: 0;
+    bottom: 0;
+}
+
+.bg-bubble-1 h3, .bg-bubble-2 h3{
+    font-size: 32px;
+    color: #868e96;
+}
+
+.bg-bubble-2, .bg-bubble-1{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(48, 74, 80, 0.5);
+    /* background-color: #2b5a60; */
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-bubble-3{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(48, 74, 80, 0.5);
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    color: #868e96;
 }
 
 .home-content {
@@ -176,7 +232,7 @@ nav ul li a:hover::before {
 }
 
 .home .home-content .detail .btn-work {
-    background-color: #1a1a1a;
+    background-color: #212529;
 }
 
 .home .home-content .detail .btn-work:hover {
@@ -184,31 +240,53 @@ nav ul li a:hover::before {
 }
 
 .home .home-content .detail .btn-contact:hover {
-    background-color: #1a1a1a;
+    background-color: #212529;
 }
 
 .home .home-content .detail .btn-contact {
     margin-left: 20px;
 }
 
+/* End home */
+
+
+
 /* about */
 .about {
+    margin: 70px 0 100px 0;
     color: #0b0b0b;
     min-height: 100vh;
 }
 
 .about-content .detail {
-    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "about about"
+    grid-template-areas: "detail-title detail-title"
     "desc ."
     "hero info";
     grid-gap: 20px 20px;
 }
 
-.about-content .detail h1 {
-    grid-area: about;
+.about-content .detail .detail-title {
+    grid-area: detail-title;
+    display: flex;
+}
+
+.about-content .detail .detail-title h1 {
+    position: relative;
+    font-size: 32px;
+    display: block;
+}
+
+.about-content .detail .detail-title h1::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #1ad3ea;
+    top: 90%;
+    overflow: hidden;
+
 }
 
 .about-content .detail p {
@@ -225,19 +303,7 @@ nav ul li a:hover::before {
     width: 100%;
 }
 
-.about-content .detail h1 {
-    font-size: 32px;
-    position: relative;
-}
 
-.about-content .detail h1::before {
-    content: '';
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background-color: #1ad3ea;
-    bottom: -1px;
-}
 
 .about-content .hero img {
     height: 500px;

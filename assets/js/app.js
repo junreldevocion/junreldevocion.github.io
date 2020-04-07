@@ -9,17 +9,17 @@ const options = {
     threshold: 0.7
 };
 
-
-// const setActive = [
-//     "home",
-//     "about",
-//     "project",
-//     "contact"
-// ];
+const setActive = [
+    "home",
+    "about",
+    "project",
+    "contact"
+];
 
 let observer = new IntersectionObserver(navCheck, options);
 
 function navCheck(entries) {
+
     entries.forEach(entry => {
 
         const className = entry.target.className;
@@ -33,6 +33,7 @@ function navCheck(entries) {
             top: coords.top,
             left: coords.left
         };
+        console.log(entry);
 
         if (entry.isIntersecting) {
 
@@ -41,10 +42,7 @@ function navCheck(entries) {
             bubble.style.setProperty('width', `${directions.width}px`);
             bubble.style.setProperty('height', `${directions.height}px`);
 
-            header.style.background = "";
-            if (activeIndex > 0) {
-                header.style.background = "#343a40";
-            }
+            // activeAnchor.classList.add('active');
         }
 
     });
