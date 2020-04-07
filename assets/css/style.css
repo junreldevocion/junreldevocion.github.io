@@ -382,7 +382,11 @@ footer .copyright .container p {
     
     /* header */
     header {
-        background-color: #343a40;
+        background-color: #1a1a1a;
+    }
+
+    .bubble {
+        display: none;
     }
 
     .navbar {
@@ -404,6 +408,16 @@ footer .copyright .container p {
         clip-path: circle(18px at 90% -10%);
         -webkit-clip-path: circle(18px at 90% -10%);
         transition: all 1s ease-in-out;
+    }
+
+    nav ul li a.active::before { 
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: #1ad3ea;
+        position: absolute;
+        bottom: -1px;
+        transform: scale(2);
     }
 
     header nav .nav-links.open {
@@ -451,9 +465,16 @@ footer .copyright .container p {
         padding: 10px 30px;
     }
 
+    /* About */
+    
+    .about-content .detail{
+        display: flex;
+        flex-direction: column;
+    }
+
 
 }
 
 
-/* About */
+
 
