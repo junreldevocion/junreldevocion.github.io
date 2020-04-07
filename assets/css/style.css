@@ -441,6 +441,8 @@ footer .copyright .container p {
 
     /* home */
 
+
+
     .home-content .detail {
         grid-column: 1/3 !important;
     }
@@ -470,6 +472,11 @@ footer .copyright .container p {
     .about-content .detail{
         display: flex;
         flex-direction: column;
+    }
+
+    .about-content .hero img {
+        height: 50%;
+        width: 100%;
     }
 
 
